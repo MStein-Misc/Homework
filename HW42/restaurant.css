@@ -1,0 +1,45 @@
+body{
+    background-color: lightgray;
+    margin: 30px;
+}
+h1 {
+    text-align: center;
+    font-size: 64px;
+    color: azure;
+    padding: 30px;
+    background-color: forestgreen;
+}
+h2{
+    margin-left: 80px;
+    font-size: 40px; 
+}
+.menuItems {
+    color: firebrick;
+    margin: 30px 60px;
+    float: left;
+    background-color: deepskyblue;
+    width: 150px;
+    border:1px solid purple;
+    padding: 10px;
+}
+.menuItems a{
+    text-decoration: none;
+    color: inherit;
+}
+.menuItems a:hover{
+    text-decoration: underline;
+}
+.menuItems img{
+    width: 25%;
+    border: initial;
+    padding: initial;
+    background: initial;
+    margin: initial;
+}
+.disc {
+    width: 300px;
+    margin: inherit;
+}
+img{
+    margin: inherit;
+}
