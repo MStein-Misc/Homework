@@ -17,7 +17,7 @@
         }
 
         h4 {
-            background-color: yellowgreen;
+            background-color: yellow;
             border: 3px solid black;
             padding: 30px 75px;
             margin: 8px;
@@ -32,17 +32,14 @@
 </head>
 
 <body>
-    <h4>Hi</h4>
-    <h4>Hi</h4>
-    <h4>Hi</h4>
-    <h4>Hi</h4>
-    <h4>Hi</h4>
-    <h4>Hi</h4>
-    <h4>Hi</h4>
-    <h4>Hi</h4>
-    <h4>Hi</h4>
-    <h4>Hi</h4>
-    <h4>Hi</h4>
+    <script>
+        for (let index = 0; index < 11; index++) {
+            var h = document.createElement("h4");
+            var t = document.createTextNode("Hi");
+            h.appendChild(t);
+            document.body.appendChild(h);
+        }
+    </script>
     <p>Some text</p>
 </body>
 
