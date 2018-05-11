@@ -1,0 +1,78 @@
+body{
+    background-color: rgb(26, 0, 0);
+    background-image: url("images/fireWolf2 (3).jpg"), url("images/grillSteak2.jpg");
+    background-size:cover, cover;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    height: 801px;
+    max-width: 900px;
+    margin: auto;
+    background-position: center right;
+}
+ border{
+   width: 100px;
+}
+.right-align-background {
+    background-position: center right;
+}
+.topBar{
+    background-color: rgb(255, 198, 198, .5);
+    padding: .5em 0;
+    text-align: center;
+    border: 2px groove black;
+    border-radius: 6px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 900px;
+    margin: auto;
+}
+.topBar a{
+    color: rgb(68, 10, 10);
+    text-decoration: none;
+    padding: 1em 1.5em;
+}
+.topBar a:hover{
+    text-decoration: underline;
+    color: maroon;
+}
+.greeting{
+    margin-top: .5em;
+    background-color: rgb(255,255,255, .2);
+    overflow: auto;
+    padding-bottom: 0px;
+}
+#welcome{
+    font-style: italic;
+    font-size: 32px;
+    text-shadow: -1px -1px 4px maroon;
+    margin-left: 2em;
+    padding-top: 2rem;
+}
+#title{
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: silver;
+    font-size: 96px;
+    text-align: center;
+    text-shadow: -3px -3px 4px rgb(83, 5, 5) ;
+}
+#sh{
+    font-size: 32px;
+}
+.menuItems{
+    text-shadow: 1px -1px 8px firebrick;
+    background-color: rgb(255, 198, 198, .5);
+    width: 150px;
+    float: left;
+    border: 3px solid rgb(0, 0, 0, .7);
+    box-shadow: 2px 2px 5px;
+    padding: 20px;
+    margin: 20px;
+}
+.menuItems li{
+    list-style-image: url(images/forkIcon4.png);
+}
+.bBar{
+    margin-top: 100px;
+}
