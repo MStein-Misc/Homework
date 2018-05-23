@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restaurant</title>
+    <Style>
+        html {
+            background-color: lightskyblue;
+        }
+
+        caption {
+            font-size: 32px;
+            font-weight: bold;
+            padding: 15px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        td:last-child,
+        th:last-child {
+            text-decoration: underline;
+        }
+
+        td,
+        th {
+            padding: 10px;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: rgb(80, 80, 80, .6);
+        }
+
+        tfoot {
+            font-weight: bold;
+        }
+    </Style>
+</head>
+
+<body>
+    <table>
+        <caption>Toppings</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Olives</th>
+                <th>Mushrooms</th>
+                <th>Peppers</th>
+                <th>Feta cheese</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>Regular</td>
+            <td>$ 0.59</td>
+            <td>$ 0.50</td>
+            <td>$ 0.39</td>
+            <td>$ 0.89</td>
+        </tr>
+        <tr>
+            <td>Small</td>
+            <td>$ 0.45</td>
+            <td>$ 0.35</td>
+            <td>$ 0.29</td>
+            <td>$ 0.79</td>
+        </tr>
+        <tr>
+            <td>Deep-Dish</td>
+            <td>$ 0.50</td>
+            <td>$ 0.39</td>
+            <td>$ 0.39</td>
+            <td>$ 0.89</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <td>Getaway Members</td>
+                <td>Free</td>
+                <td>Free</td>
+                <td>Free</td>
+                <td>$ 0.50</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>
