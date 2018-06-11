@@ -68,6 +68,12 @@ header{
     justify-content: center;
 }
 
+video, img{
+    width: 90%;
+    height: 90%;
+}
+
+
 .product h4{
     text-align: center;
 }
@@ -175,11 +181,6 @@ tr:hover{
 }
 
 @media screen and (min-width: 1000px){
-
-    video, img{
-        width: 90%;
-        height: 90%;
-    }
 
     .products{
         display: grid;
