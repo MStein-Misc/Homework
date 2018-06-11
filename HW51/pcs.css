@@ -176,12 +176,7 @@ tr:hover{
 
 @media screen and (min-width: 1000px){
 
-    video{
-        width: 90%;
-        height: 90%;
-    }
-
-    img{
+    video, img{
         width: 90%;
         height: 90%;
     }
