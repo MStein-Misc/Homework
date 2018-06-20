@@ -20,7 +20,6 @@ function some(arr, ufunc){
 let letters = ['A', 'b', 'C'];
 console.log(some(letters, upper));
 console.log(some(letters, lower));
-//---------------console.log(Array.some(letters, upper));
 
 
 //2.
@@ -41,4 +40,3 @@ function onlyIf(array, test, action) {
 }
 
 onlyIf(letters, test, action);
-//-------------console.log(Array.forEach(test, letters));
