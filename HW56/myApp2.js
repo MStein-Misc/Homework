@@ -1,6 +1,6 @@
 'use strict'
-myApp = (function (myApp) {
-    utils = myApp.utils || {};
+var myApp = (function (myApp) {
+    var utils = myApp.utils || {};
     utils.mystringcaseinsensitiveEquals = function (a, b) {
         return a.toLowerCase() === b.toLowerCase();
     }

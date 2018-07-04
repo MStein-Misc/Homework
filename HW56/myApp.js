@@ -1,9 +1,9 @@
 'use strict'
-myApp = (function (myApp) {
+var myApp = (function (myApp) {
     const days = [
         "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Shabbos"
     ];
-    utils = myApp.utils || {};
+    var utils = myApp.utils || {};
     utils.getDayName = function (x) {
         return days[x - 1];
     }
