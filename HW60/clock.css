@@ -1,0 +1,26 @@
+
+.clockclass{
+    background-color: aqua;
+    border: 3px ridge black;
+    margin: 10px;
+    min-width: 75px;
+}
+
+.clockclass p{
+    padding: 10px;
+}
+
+.timerclass{
+    background-color: red;
+    border: 3px ridge black;
+    margin: 10px;
+    min-width: 75px;
+}
+
+.timerclass p{
+    padding: 10px;
+}
+
+.blockdiv{
+    display: flex;
+}
