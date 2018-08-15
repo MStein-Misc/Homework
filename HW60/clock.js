@@ -7,6 +7,7 @@ var ClockFactory = ClockFactory || {};
     ClockFactory.newClock = function () {
         const clockdiv = document.createElement('div');
         const clock = document.createElement('p');
+        clock.innerHTML = new Date().toLocaleTimeString();
         clockdiv.appendChild(clock);
         clockdiv.className = 'clockclass';
         setInterval(() => clock.innerHTML = new Date().toLocaleTimeString(), 1000);
@@ -18,7 +19,7 @@ var ClockFactory = ClockFactory || {};
         const timer = document.createElement('p');
         timerdiv.appendChild(timer);
         timerdiv.className = 'timerclass';
-
+        
         let timerticks;
         (function (){
             let ticks = 0;
@@ -29,12 +30,13 @@ var ClockFactory = ClockFactory || {};
                 ticks++;
                 return h + ':' + m + ':' + s;
             }
-
+            
             function formattime(string){
                 string = string.toString()
                 return string.length < 2 ? '0' + string : string;
             }
         })();
+        timer.innerHTML = timerticks();
         setInterval(() => timer.innerHTML = timerticks(), 1000);
         return timerdiv;
     };

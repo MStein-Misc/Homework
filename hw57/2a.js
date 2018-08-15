@@ -1,13 +1,15 @@
+
+
 // 2a
 var app = app || {};
 app.counter = (function(){
+    place = 0;
     return {
-        place:0,
         increment:function(){
-            this.place++;
+            place++;
         },
         get:function(){
-            return this.place;
+            return place;
         }
     };
 }());

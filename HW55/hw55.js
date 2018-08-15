@@ -1,39 +1,14 @@
 'use strict'
 let dayOfWeek = (function () {
+    const days = [
+        "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Shabbos"
+    ];
     return  {
         getDayName:function (x) {
-            const days = [
-                "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Shabbos"
-            ];
-            return days[x];
+            return days[x + 1];
         },
         getDayNum:function (name) {
-            switch (name) {
-                case "Sunday":
-                    return 1;
-                    break;
-                case "Monday":
-                    return 2;
-                    break;
-                case "Tuesday":
-                    return 3;
-                    break;
-                case "Wednesday":
-                    return 4;
-                    break;
-                case "Thursday":
-                    return 5;
-                    break;
-                case "Friday":
-                    return 6;
-                    break;
-                case "Shabbos":
-                    return 7;
-                    break;
-                default:
-                    return "Not A Day";
-                    break;
-            }
+            return days.indexOf(name) + 1;
         }
     };
 }());
@@ -42,9 +17,9 @@ let dayOfWeek = (function () {
 
 
 let calInterest = (function(){
+    let rate = 0.01;
+    let years = 5;
     return {
-        rate:0.01,
-        years:5,
         calcinterest : function(x){
             return x * rate * years;
         },

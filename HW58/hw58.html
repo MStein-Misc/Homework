@@ -7,11 +7,14 @@
     <title>Document</title>
 </head>
 <script>
-    window.onload=(function(){
     'use strict'
-    const b = document.getElementById('button');
-    b.addEventListener('click', event=>{
-        document.getElementById('body').style.background = document.getElementById('color').value;
+    window.onload=(function(){
+    // const b = document.getElementById('button');
+    // b.addEventListener('click', event=>{
+    //     document.body.style.background = document.getElementById('color').value;
+    // });
+    document.getElementById('color').addEventListener('change', event => {
+        document.body.style.background = event.srcElement.value;
     });
 });
 </script>

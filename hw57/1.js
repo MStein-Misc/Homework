@@ -1,3 +1,4 @@
+
 let map = function (args, callback) {
     const myArray = [];
     i = 0;

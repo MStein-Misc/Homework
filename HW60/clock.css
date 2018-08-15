@@ -3,22 +3,26 @@
     background-color: aqua;
     border: 3px ridge black;
     margin: 10px;
-    min-width: 75px;
+    width: 120px;
 }
 
 .clockclass p{
+    text-align: center;
     padding: 10px;
+    margin: auto;
 }
 
 .timerclass{
     background-color: red;
     border: 3px ridge black;
     margin: 10px;
-    min-width: 75px;
+    width: 100px;
 }
 
 .timerclass p{
+    text-align: center;
     padding: 10px;
+    margin: auto;
 }
 
 .blockdiv{
