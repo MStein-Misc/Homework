@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snake</title>
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #canvas {
+            border: 2px solid maroon;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        #panel {
+            display: flex;
+            height: 25px;
+            padding: 0;
+            justify-content: space-between;
+        }
+
+        #panel div {
+            display: flex;
+        }
+
+        p,
+        div {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="panel">
+        <button id="theButton">New Game</button>
+        <div>
+            <p>High Score: </p>
+            <p id="highScore"></p>
+        </div>
+
+    </div>
+    <canvas id="canvas"></canvas>
+    <audio src="Resources/crunch.mp3" id="crunch"></audio>
+    <audio src="Resources/Puzzle-Game.mp3" autoplay></audio>
+    <script src="snake.js"></script>
+</body>
+
+</html>
