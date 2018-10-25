@@ -1,0 +1,18 @@
+{
+  "name": "hw74",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hw74.js",
+  "scripts": {
+    "webpack": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devdependencies": {
+    "webpack": "^4.20.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.1.2"
+  }
+}

@@ -1,0 +1,15 @@
+
+html{
+    background-color: gray;
+}
+
+body{
+    background-color: white;
+    width: 75%;
+    height: 1000px;
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+    margin-top: 0;
+}

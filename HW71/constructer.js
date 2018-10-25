@@ -16,6 +16,7 @@ function Plane(color) {
 }
 Plane.prototype = Object.create(Vehicle.prototype);
 Plane.prototype.constructor = Plane;
+
 Plane.prototype.go = function (speed) {
     this.speed = speed;
     console.log(speed, 'flying');

@@ -59,29 +59,28 @@ window.AntDemo = {};
     Ant.height = 1, Ant.width = 1, Ant.color = 'black';
     function Ant() {
         this.location = new Location(home);
-        this.focus = 0;
+        this.focus = random(0, 50);
         this.direction = reorient();
         this.color = Ant.color;
     }
     Ant.prototype.move = function () {
         if (this.destination) {
             this.go();
-            if (this.location.equals(this.destination)) {
-                if (this.location.equals(home)) {
-                    this.returnHome();
+            if (this.location.equals(home)) {
+                this.returnHome();
+            } else {
+                const food = checkForFood(this.location.x, this.location.y)
+                if (food) {
+                    food.eaten();
+                    this.foundFood();
                 } else {
-                    const food = checkForFood(this.location.x, this.location.y)
-                    if (food) {
-                        food.eaten();
-                        this.foundFood();
-                    } else {
+                    if (this.location.equals(this.destination)) {
                         this.destination = undefined;
                         this.foodLocation = undefined;
                         this.direction = reorient();
                     }
                 }
             }
-            //TODO: dont go off the board? who cares
             if (this.foodLocation) {
                 var loc = new Location(this.location);
                 loc.destination = new Location(this.foodLocation);
@@ -120,7 +119,7 @@ window.AntDemo = {};
         this.focus++;
         if (this.location.x + step >= width || this.location.x <= step || this.location.y + step >= height || this.location.y <= step || this.focus >= focus) {
             this.direction = reorient();
-            this.focus = 0;
+            this.focus = random(0, 50);
         }
     }
     Ant.prototype.foundFood = function () {
@@ -214,12 +213,6 @@ window.AntDemo = {};
 
     let chemicals = [];
 
-    setInterval(() => {
-        for (let i = 0; i < foods.length; i++) {
-            foods[i] = randomFood();
-        }
-    }, 60000);
-
     function resetFrame() {
 
         let r = Math.sqrt(home.food * 2 / Math.PI);
@@ -247,8 +240,7 @@ window.AntDemo = {};
         ants.forEach(ant => {
             if (!ant.destination && ant.focus > 20) {
                 for (const loc of chemicals) {
-                    if (range(ant.location.x, loc.x - 0, 3) && range(ant.location.y, loc.y - 0, 3)) {
-                        // if (ant.location.equals(loc)) {
+                    if (range(ant.location.x, loc.x - 0, 5) && range(ant.location.y, loc.y - 0, 5)) {
                         ant.destination = new Location(loc.destination);
                         break;
                     }
@@ -270,6 +262,12 @@ window.AntDemo = {};
     let id;
     AntDemo.start = function () {
         id = setInterval(intervals, 80);
+
+        setInterval(() => {
+            for (let i = 0; i < foods.length; i++) {
+                foods[i] = randomFood();
+            }
+        }, 60000);
         // setTimeout(() => {
         //     focus = 50;
         // }, 5000);

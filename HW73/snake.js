@@ -1,3 +1,18 @@
+
+
+/*TODO: 
+    resize to exact tile size
+    rewrite draw code to draw in 3 stages 1) redraw old head 2)draw new head 3)clear old tail if necessary 
+        4) draw new apple if necessary
+    out sound
+    out visual
+    new game / pause game control
+*/
+
+
+
+
+
 (function () {
     'use strict';
 
@@ -117,20 +132,6 @@
 
     //=========================
 
-    function newGame() {
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        snake = new Snake(), apple = new Apple(), score = 0;
-        game = true;
-    }
-
-    newGame();
-    var highScore = localStorage.getItem("snake") || 0;
-
-    const highScoreElem = document.getElementById('highScore');
-    highScoreElem.innerHTML = highScore;
-    const newGameBtn = document.getElementById('theButton');
-    newGameBtn.addEventListener('click', newGame);
-
     const canvas = document.getElementById('canvas');
     const context = canvas.getContext('2d');
     function resizeCanvas() {
@@ -138,6 +139,20 @@
         canvas.height = window.innerHeight - 35;
     }
     resizeCanvas();
+
+    var snake, apple, score;
+    function newGame() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        snake = new Snake(), apple = new Apple(), score = 0;
+        game = true;
+    }
+
+    var highScore = localStorage.getItem("snake") || 0;
+
+    const highScoreElem = document.getElementById('highScore');
+    highScoreElem.innerHTML = highScore;
+    const newGameBtn = document.getElementById('theButton');
+    newGameBtn.addEventListener('click', newGame);
     window.addEventListener('resize', resizeCanvas);
 
     const crunchSound = document.getElementById('crunch'),
@@ -171,6 +186,7 @@
         }
         if (game) timeoutid = setTimeout(render, snake.speed);
     }
+    newGame();
 
     function out() {
         console.log('out');
@@ -190,3 +206,5 @@
     window.apple = apple;
 
 }());
+
+document.dispatchEvent(new Event('click'));
