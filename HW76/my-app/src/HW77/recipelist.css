@@ -8,6 +8,18 @@
 li{
     list-style-type: none;
 }
+li>h1:hover{
+    animation: seesaw 3s;
+    animation-timing-function: ease-in-out;
+}
 ul{
     padding: 0;
+}
+@keyframes seesaw {
+    0%, 50%{
+        transform: rotate(15deg);
+    }
+    25%, 75%{
+        transform: rotate(-15deg);
+    }
 }
