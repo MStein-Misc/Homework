@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 import './student.css';
 
 class Student extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <div>

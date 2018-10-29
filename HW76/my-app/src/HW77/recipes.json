@@ -1,0 +1,38 @@
+
+{
+    "Cappuchino wells":{
+        "ingredients":[
+            "flour",
+            "eggs",
+            "sugar",
+            "oil",
+            "cappachino"
+        ],
+        "procedure":[
+            "mix ingredients",
+            "bake"
+        ]
+    },
+    "Cholent":{
+        "ingredients":[
+            "oil",
+            "eggs",
+            "sugar"
+        ],
+        "procedure":[
+            "mix ingredients",
+            "bake"
+        ]
+    },
+    "Cholent2":{
+        "ingredients":[
+            "oil",
+            "eggs",
+            "sugar"
+        ],
+        "procedure":[
+            "mix ingredients",
+            "bake"
+        ]
+    }
+}

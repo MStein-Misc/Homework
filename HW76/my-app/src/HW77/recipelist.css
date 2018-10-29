@@ -1,0 +1,13 @@
+
+.recipe{
+    padding: 45px;
+    border: 1px solid black;
+    margin: 10px;
+    background-color: lightgray;
+}
+li{
+    list-style-type: none;
+}
+ul{
+    padding: 0;
+}
