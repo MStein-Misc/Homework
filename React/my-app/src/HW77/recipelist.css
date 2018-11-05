@@ -11,15 +11,19 @@ li{
 li>h1:hover{
     animation: seesaw 3s;
     animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 ul{
     padding: 0;
 }
 @keyframes seesaw {
-    0%, 50%{
+    50%{
         transform: rotate(15deg);
+        opacity: 0;
     }
     25%, 75%{
         transform: rotate(-15deg);
+        opacity: 1;
     }
 }
